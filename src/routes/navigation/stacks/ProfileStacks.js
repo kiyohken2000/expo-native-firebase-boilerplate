@@ -3,7 +3,9 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { navigationProps } from './navigationProps/navigationProps'
 
 import Profile from '../../../scenes/profile/Profile'
-import Details from '../../../scenes/details/Details'
+import EditProfile from '../../../scenes/editProfile/EditProfile'
+
+import GradientHeader from '../../../components/GradientHeader'
 
 const Stack = createStackNavigator()
 
@@ -18,14 +20,15 @@ export const ProfileStacks = () => {
         component={Profile}
         options={({ navigation }) => ({
           title: 'Profile',
+          headerBackground: () => <GradientHeader />,
         })}
       />
       <Stack.Screen
-        name="Details"
-        component={Details}
+        name="EditProfile"
+        component={EditProfile}
         options={{
-          title: 'Details',
-          headerBackTitleVisible: false,
+          title: 'Edit',
+          headerBackground: () => <GradientHeader />,
         }}
       />
     </Stack.Navigator>

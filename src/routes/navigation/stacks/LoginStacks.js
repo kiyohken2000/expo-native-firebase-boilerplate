@@ -2,24 +2,21 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { navigationProps } from './navigationProps/navigationProps'
 
-import { ReadWriteTopTabs } from '../toptabs/ReadWriteTopTabs'
-
-import GradientHeader from '../../../components/GradientHeader'
+import Login from '../../../scenes/login/Login'
 
 const Stack = createStackNavigator()
 
-export const ReadWriteStacks = () => {
+export const LoginStacks = () => {
   return (
     <Stack.Navigator
-      initialRouteName="ReadWrite"
+      initialRouteName="Login"
       screenOptions={navigationProps}
     >
       <Stack.Screen
-        name="ReadWrite"
-        component={ReadWriteTopTabs}
+        name="Login"
+        component={Login}
         options={({ navigation }) => ({
-          title: 'ReadWrite',
-          headerBackground: () => <GradientHeader />,
+          title: 'Login',
         })}
       />
     </Stack.Navigator>

@@ -1,22 +1,56 @@
 import React, { useContext, useEffect } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Alert } from 'react-native'
 import Button from '../../components/Button'
 import { colors, fontSize } from '../../theme'
 import { useNavigation } from '@react-navigation/native'
 import { UserContext } from '../../contexts/UserContext'
 import ScreenTemplate from '../../components/ScreenTemplate'
 import { showToast } from '../../utils/showToast'
+import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
+import { sendNotification } from '../../utils/SendNotification'
 
 export default function Home() {
   const navigation = useNavigation()
-  const { user } = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext)
 
   useEffect(() => {
-    console.log('user:', user)
+    //console.log('user:', user)
+  }, [user])
+
+  useEffect(() => {
+    const fetchData = async() => {
+      const querySnapshot = await firestore().collection('test').get();
+      const items = querySnapshot.docs.map((doc) => doc.data())
+      //console.log(items)
+    }
+    fetchData()
   }, [])
 
   const onToastPress = () => {
     showToast({title: 'Hello', body: 'React Native Developer'})
+  }
+
+  const onNotificationPress = async() => {
+    const res = await sendNotification({
+      title: 'Hello',
+      body: 'This is some something 👋',
+      data: 'something data',
+      id: user.id
+    })
+    if(!res) {
+      showAlert()
+    }
+  }
+
+  const showAlert = () => {Alert.alert(
+    'Error',
+    'Could not send notification.',
+    [
+      {text: 'Close', onPress: () => console.log('close')},
+    ],
+    { cancelable: false }
+  )
   }
   
   return (
@@ -76,6 +110,14 @@ export default function Home() {
             labelColor={colors.white}
             disable={false}
             onPress={onToastPress}
+          />
+          <View style={{marginVertical: 10}} />
+          <Button
+            label="Send Notification"
+            color={colors.lightPurple}
+            labelColor={colors.white}
+            disable={false}
+            onPress={onNotificationPress}
           />
         </View>
       </View>

@@ -6,6 +6,8 @@ import Home from '../../../scenes/home/Home'
 import Details from '../../../scenes/details/Details'
 import Menu from '../../../scenes/menu/Menu'
 
+import GradientHeader from '../../../components/GradientHeader'
+
 const Stack = createStackNavigator()
 
 export const HomeStacks = () => {
@@ -29,6 +31,7 @@ export const HomeStacks = () => {
         options={({ navigation }) => ({
           title: 'Details',
           headerBackTitleVisible: false,
+          headerBackground: () => <GradientHeader />,
         })}
       />
       <Stack.Group
