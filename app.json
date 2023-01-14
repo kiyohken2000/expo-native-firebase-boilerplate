@@ -34,7 +34,7 @@
       "userInterfaceStyle": "automatic"
     },
     "android": {
-      "package": "expo.native.firebase.boilerplate",
+      "package": "expo.nativefirebase.boilerplate",
       "versionCode": 1,
       "userInterfaceStyle": "automatic",
       "googleServicesFile": "./google-services.json",

@@ -7,12 +7,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:774343409727:android:be34c9a11a07e0eb36b88a",
+        "mobilesdk_app_id": "1:774343409727:android:c2458310f892556536b88a",
         "android_client_info": {
-          "package_name": "expo.native.firebase.boilerplate"
+          "package_name": "expo.nativefirebase.boilerplate"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "774343409727-uuma35370popilpa2iunrcu7ekkfid3k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "expo.nativefirebase.boilerplate",
+            "certificate_hash": "4ab18506a99dc02e634f492e9c09a74b174fbcf2"
+          }
+        },
         {
           "client_id": "774343409727-abr8rchacujvva71dhc39499b242fi17.apps.googleusercontent.com",
           "client_type": 3
