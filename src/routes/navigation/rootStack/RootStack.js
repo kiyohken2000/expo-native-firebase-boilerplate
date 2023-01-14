@@ -48,6 +48,13 @@ export default function RootStack() {
     })();
   }, [user])
 
+  useEffect(() => {
+    const subscription = Notifications.addNotificationReceivedListener(notification => {
+      console.log(notification.request.content)
+    });
+    return () => subscription.remove();
+  }, []);
+
   return (
     <HomeTitleContext.Provider
       value={{
