@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "expo-native-firebase-boilerplate",
+    "slug": "expo-native-firebase-boilerplate",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo-sm.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 10000
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "expo.native.firebase.boilerplate",
+      "buildNumber": "1.0.0",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Use the photo library to change your avatar.",
+        "CFBundleDevelopmentRegion": "ja_JP"
+      },
+      "userInterfaceStyle": "automatic"
+    },
+    "android": {
+      "package": "expo.native.firebase.boilerplate",
+      "versionCode": 1,
+      "userInterfaceStyle": "automatic",
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "VIBRATE",
+        "CAMERA"
+      ]
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "js",
+        "jsx",
+        "svg",
+        "ts",
+        "tsx"
+      ]
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "64f6422a-5ca9-4bd1-a00a-4c54320dc353"
+      }
+    }
+  }
+}

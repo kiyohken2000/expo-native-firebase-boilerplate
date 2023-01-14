@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "774343409727",
+    "project_id": "expo-native-firebase-24f26",
+    "storage_bucket": "expo-native-firebase-24f26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774343409727:android:be34c9a11a07e0eb36b88a",
+        "android_client_info": {
+          "package_name": "expo.native.firebase.boilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774343409727-abr8rchacujvva71dhc39499b242fi17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfZu0TvM58LsmtKenca5p-L3VuvzV6pmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774343409727-abr8rchacujvva71dhc39499b242fi17.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "774343409727-pdo8n7jbpl96se26lmp2a5i4uqct5fef.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "expo.native.firebase.boilerplate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
