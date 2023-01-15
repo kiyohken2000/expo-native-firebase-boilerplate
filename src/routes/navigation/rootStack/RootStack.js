@@ -9,6 +9,7 @@ import * as Notifications from 'expo-notifications'
 import * as Device from 'expo-device';
 import { UserContext } from "../../../contexts/UserContext";
 import firestore from '@react-native-firebase/firestore';
+import { experienceId } from "../../../config";
 
 const Stack = createStackNavigator()
 
@@ -39,7 +40,7 @@ export default function RootStack() {
         return;
       }
       const token = await Notifications.getExpoPushTokenAsync({
-        experienceId: '@votepurchase/expo-native-firebase-boilerplate'
+        experienceId
       });
       await firestore().collection('tokens').doc(user.id).set({
         id: user.id,
