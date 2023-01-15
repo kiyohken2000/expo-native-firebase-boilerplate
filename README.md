@@ -183,7 +183,7 @@ const defaultAvatar = 'your default icon url'
 const experienceId = '@username/projectSlug'
 ```
 
-### 5. Build the develop client
+### 5. Build the development client
 
 **Step 1: Register iPhone in Ad Hoc and install profile on iPhone**
 
@@ -223,7 +223,7 @@ expo push:android:upload --api-key <your-token-here>
 
 ![](./__DELELE_ME__/img16.png)
 
-**Copy your Android app Credentials**
+**Copy and paste your Android app Credentials**
 
 1. Copy your **SHA-1 Certificate Fingerprint** and **SHA-256 Certificate Fingerprint** from expo's dashboard.
 2. Paste your credentials.
@@ -233,6 +233,8 @@ expo push:android:upload --api-key <your-token-here>
 ![](./__DELELE_ME__/img18.png)
 
 ### 7. Run your app
+
+Thanks for all your hard work. Finally you can run your application.
 
 ```
 yarn start
@@ -291,11 +293,8 @@ const onNotificationPress = async() => {
     title: 'Hello',
     body: 'This is some something 👋',
     data: 'something data',
-    id: user.id // //e.g. ExponentPushToken[WGSdXiJ5rLHAK53DRPq2x-]
+    id: user.id // firebase user id
   })
-  if(!res) {
-    showAlert()
-  }
 }
 ```
 
