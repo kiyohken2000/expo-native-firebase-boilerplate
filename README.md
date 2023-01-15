@@ -236,6 +236,104 @@ yarn start
 
 Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
 
+## How to use utils
+
+- ### Storage
+
+```javascript
+import { storage } from '../../utils/Storage'
+
+const saveStorage = async() => {
+  const today = moment().toString()
+  await storage.save({
+    key: 'date',
+    data: {
+      'date': today
+    }
+  })
+}
+
+const loadStorage = async() => {
+  try {
+    const result = await storage.load({key: 'date'})
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+const removeStorage = async() => {
+  await storage.remove({ key: 'date' })
+}
+```
+
+- ### Toast & Push Notification
+
+```javascript
+// Toast
+import { showToast } from '../../utils/ShowToast'
+
+const onShowToastPress = () => {
+  showToast({
+    title: 'Hello',
+    body: 'This is some something 👋',
+    isDark // true or false
+  })
+}
+
+// Send Notification
+import { sendNotification } from '../../utils/SendNotification'
+
+const onNotificationPress = async() => {
+  const res = await sendNotification({
+    title: 'Hello',
+    body: 'This is some something 👋',
+    data: 'something data',
+    id: user.id // //e.g. ExponentPushToken[WGSdXiJ5rLHAK53DRPq2x-]
+  })
+  if(!res) {
+    showAlert()
+  }
+}
+```
+
+- ### Data fetch, Loading, Error
+
+![](./__DELELE_ME__/img19.jpg)
+
+```javascript
+export default function Write() {
+  const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(false) // Create loading flag
+  const [isError, setIsError] = useState(false) // Create error flag
+
+  const fetchData = async() => {
+    try {
+      setIsLoading(true) // Set flag
+      setIsError(false) // Set flag
+      const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+      setData(data)
+    } catch(e) {
+      console.log('error', e)
+      setIsError(true) // Set flag
+    } finally {
+      setIsLoading(false) // Set flag
+    }
+  }
+
+  return (
+    <ScreenTemplate isLoading={isLoading} isError={isError}> {/* Pass flag to ScreenTemplate component */}
+      <ScrollView style={styles.main}>
+        {data.map((item, i) => {
+          return (
+            <RenderItem item={item} key={i} index={i} />
+          )
+        })}
+      </ScrollView>
+    </ScreenTemplate>
+  )
+}
+```
+
 ## NOTES
 
 ### EAS commands
