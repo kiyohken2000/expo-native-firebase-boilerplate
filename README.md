@@ -217,6 +217,8 @@ expo push:android:upload --api-key <your-token-here>
 1. Download your APNs Push Key from expo's dashboard.
 2. Upload your APNs Push Key to Firebase.
 
+![](./__DELELE_ME__/img15.png)
+
 ![](./__DELELE_ME__/img16.png)
 
 **Copy your Android app Credentials**
