@@ -50,7 +50,7 @@ This is a React Native Expo project, with React Native Firebase setup. Not Fireb
 - moment
 - lottie-react-native
 
-### Requirements
+## Requirements
 
 - expo account
 - Node 16
@@ -197,6 +197,8 @@ eas device:create
 eas build --profile development --platform ios
 eas build --profile development --platform android
 ```
+
+![](./__DELELE_ME__/img20.jpg)
 
 ### 6. Uploading Server Credentials
 
