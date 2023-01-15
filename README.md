@@ -1,4 +1,4 @@
-# React Native Expo with Firebase boiperplate
+# React Native Expo with Firebase boilerplate
 
 This is a React Native Expo project, with React Native Firebase setup. Not Firebase JS SDK.
 
