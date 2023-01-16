@@ -390,13 +390,13 @@ import { useFocusEffect } from '@react-navigation/native'
 import { HomeTitleContext } from "../../contexts/HomeTitleContext";
 ```
 
-Step 5: Set screen title.
+Step 5: Set header title.
 
 ```javascript
 const { setTitle } = useContext(HomeTitleContext)
 
 useFocusEffect(() => {
-  setTitle('screen title')
+  setTitle('header title')
 });
 ```
 
