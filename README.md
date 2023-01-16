@@ -4,6 +4,8 @@ This is a React Native Expo project, with React Native Firebase setup. Not Fireb
 
 [Demo APK](https://drive.google.com/file/d/1jQoF2rkESbUany0d-elJ3nbdS_jVTi8f/view?usp=sharing)
 
+<a href="https://www.buymeacoffee.com/votepurchase" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 ## Screens
 
 ### Sign up and login on SMS authentication
