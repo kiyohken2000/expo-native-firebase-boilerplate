@@ -336,6 +336,72 @@ export default function Write() {
 }
 ```
 
+- ### Dynamic header title
+
+Example `src\routes\navigation\stacks\ModalStacks.js` and `src\scenes\modal\Modal.js`.
+
+Step 1: Import `HomeTitleContext` into stacks component.
+
+```javascript
+import { HomeTitleContext } from "../../../contexts/HomeTitleContext";
+```
+
+Step 2: Create default title state.
+
+```javascript
+const [title, setTitle] = useState('default title')
+```
+
+Step 3: Wrap Stack.Navigator with HomeTitleContext.
+
+Pass `ctx.title` to `options.title`.
+
+```javascript
+<HomeTitleContext.Provider
+  value={{
+    title,
+    setTitle,
+  }}
+>
+  <HomeTitleContext.Consumer>
+    {(ctx) => (
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: true,
+        }}
+      >
+        <Stack.Screen
+          name='Modal'
+          component={Modal}
+          options={{
+            title: ctx.title, // <= this
+            headerBackTitleVisible: false,
+          }}
+        />
+      </Stack.Navigator>
+  )}
+  </HomeTitleContext.Consumer>
+</HomeTitleContext.Provider>
+```
+
+Step 4: Import `useFocusEffect` and `useContext` and `HomeTitleContext`.
+
+```javascript
+import React, { useContext } from "react";
+import { useFocusEffect } from '@react-navigation/native'
+import { HomeTitleContext } from "../../contexts/HomeTitleContext";
+```
+
+Step 5: Set screen title.
+
+```javascript
+const { setTitle } = useContext(HomeTitleContext)
+
+useFocusEffect(() => {
+  setTitle('screen title')
+});
+```
+
 ## NOTES
 
 ### EAS commands
