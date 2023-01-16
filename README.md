@@ -2,6 +2,8 @@
 
 This is a React Native Expo project, with React Native Firebase setup. Not Firebase JS SDK.
 
+[Demo APK](https://drive.google.com/file/d/1jQoF2rkESbUany0d-elJ3nbdS_jVTi8f/view?usp=sharing)
+
 ## Screens
 
 ### Sign up and login on SMS authentication
