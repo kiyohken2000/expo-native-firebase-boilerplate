@@ -352,9 +352,7 @@ Step 2: Create default title state.
 const [title, setTitle] = useState('default title')
 ```
 
-Step 3: Wrap `Stack.Navigator` with `HomeTitleContext`.
-
-Pass `ctx.title` to `options.title`.
+Step 3: Wrap `Stack.Navigator` with `HomeTitleContext`. And pass `ctx.title` to `options.title`.
 
 ```javascript
 <HomeTitleContext.Provider
@@ -384,7 +382,7 @@ Pass `ctx.title` to `options.title`.
 </HomeTitleContext.Provider>
 ```
 
-Step 4: Import `useFocusEffect` and `useContext` and `HomeTitleContext`.
+Step 4: Import `useFocusEffect` and `useContext` and `HomeTitleContext` in scene component.
 
 ```javascript
 import React, { useContext } from "react";
