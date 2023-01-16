@@ -352,7 +352,7 @@ Step 2: Create default title state.
 const [title, setTitle] = useState('default title')
 ```
 
-Step 3: Wrap Stack.Navigator with HomeTitleContext.
+Step 3: Wrap `Stack.Navigator` with `HomeTitleContext`.
 
 Pass `ctx.title` to `options.title`.
 
